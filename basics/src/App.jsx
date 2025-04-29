@@ -3,18 +3,18 @@ import React, { useState } from "react";
 import "./App.css";
 
 const App = () => {
-  //const [counter, setCounter] = useState(0);
-  let counter = 0;
-
+  const [counter, setCounter] = useState(5);
+  //let counter = 0;
+  console.log("render", counter);
   const handleClick1 = () => {
-    //setCounter(counter + 1);
-    counter++;
+    setCounter(counter + 1);
+    //counter++;
     console.log(counter);
   };
 
   const handleClick2 = () => {
-    //setCounter(counter - 1);
-    counter--;
+    setCounter(counter - 1);
+    //counter--;
     console.log(counter);
   };
 
