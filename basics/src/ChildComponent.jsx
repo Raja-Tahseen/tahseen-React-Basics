@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
-function ChildComponent(props) {
-  // Destructure the props for easier access : Destructuring is a JavaScript feature (introduced in ES6) that allows you to unpack values from objects or arrays into distinct variables.
-  const { user, greeting, showDetails } = props;
+function ChildComponent({
+  user,
+  greeting,
+  showDetails,
+  onSendMessage,
+  onUpdateName,
+}) {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleSendClick = () => {
+    // Calling parent function with data
+    onSendMessage(inputValue);
+    setInputValue("");
+  };
+
+  const handleUpdateName = () => {
+    const newName = prompt("Enter new name:", user.name);
+    if (newName) {
+      onUpdateName(newName); // Calling parent to update data
+    }
+  };
 
   return (
     <div className="child-component">
@@ -21,6 +39,21 @@ function ChildComponent(props) {
             <p>Hobbies: {user.hobbies.join(", ")}</p>
           </>
         )}
+      </div>
+
+      {/* Child-to-parent communication examples */}
+      <div className="child-actions">
+        <input
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder="Type a message to parent"
+        />
+        <button onClick={handleSendClick}>Send to Parent</button>
+
+        <button onClick={handleUpdateName} style={{ marginTop: "10px" }}>
+          Change User Name
+        </button>
       </div>
     </div>
   );

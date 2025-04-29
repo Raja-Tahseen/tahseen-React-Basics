@@ -5,6 +5,14 @@ import ChildComponent from "./ChildComponent";
 
 const App = () => {
   const [counter, setCounter] = useState(5);
+  const [childMessage, setChildMessage] = useState("");
+  const [userData, setUserData] = useState({
+    name: "John Doe",
+    age: 30,
+    email: "john.doe@example.com",
+    isAdmin: true,
+    hobbies: ["Reading", "Hiking", "Coding"],
+  });
   //let counter = 0;
   console.log("render", counter);
   const handleClick1 = () => {
@@ -19,18 +27,23 @@ const App = () => {
     console.log(counter);
   };
 
-  // Data to be passed to the child component
-  const userData = {
-    name: "John Doe",
-    age: 30,
-    email: "john.doe@example.com",
-    isAdmin: true,
-    hobbies: ["Reading", "Hiking", "Coding"],
+  //Callback function to receive data from child
+  const handleChildEvent = (message) => {
+    setChildMessage(message);
+    alert(`Parent Received: ${message}`);
+  };
+
+  //Callback to update user name
+  const updateUserName = (newName) => {
+    setUserData((prev) => ({
+      ...prev,
+      name: newName,
+    }));
   };
 
   return (
     <div>
-      <div
+      {/* <div
         style={{
           display: "flex",
           flexDirection: "column",
@@ -83,13 +96,15 @@ const App = () => {
             Decrement
           </button>
         </div>
-      </div>
+      </div> */}
       <br></br>
       <div>
         <ChildComponent
           user={userData}
           greeting="Hello from parent!"
           showDetails={true}
+          onSendMessage={handleChildEvent} // Passing callback as prop
+          onUpdateName={updateUserName} // Another callback example
         />
       </div>
     </div>
