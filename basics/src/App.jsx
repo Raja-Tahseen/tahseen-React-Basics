@@ -8,6 +8,7 @@ import StateInReact_05 from "./components/05_StateInReact/StateInReact_05";
 import HandlingEvents_06 from "./components/06_HandlingEvents/HandlingEvents_06";
 import Conditionals_07 from "./components/07_Conditionals/Conditionals_07";
 import FormsAndConditionals_08 from "./components/08_FormsAndConditionals/FormsAndConditionals_08";
+import Lists_09 from "./components/09_Lists/Lists_09";
 import "./App.css";
 
 const App = () => {
@@ -42,6 +43,9 @@ const App = () => {
             <li>
               <Link to="/FormsAndConditionals">FormsAndConditionals</Link>
             </li>
+            <li>
+              <Link to="/Lists">Lists</Link>
+            </li>
           </ul>
         </nav>
 
@@ -64,6 +68,7 @@ const App = () => {
               path="/FormsAndConditionals"
               element={<FormsAndConditionals_08 />}
             />
+            <Route path="/Lists" element={<Lists_09 />} />
           </Routes>
         </main>
       </div>
