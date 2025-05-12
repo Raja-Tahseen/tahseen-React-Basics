@@ -1,4 +1,5 @@
 import React from "react";
+import Counter from "./Counter";
 
 const StateInReact_05 = () => {
   return (
@@ -9,6 +10,8 @@ const StateInReact_05 = () => {
         <li>Explain why we use state in React.</li>
         <li>What happens when state updates in React?</li>
       </ol>
+      <h1>Task 1 - Simple Counter app using useState </h1>
+      <Counter />
     </div>
   );
 };

@@ -1,4 +1,6 @@
 import React from "react";
+import Greeting from "./Greeting";
+import GreetingParameterized from "./GreetingParameterized";
 import { useSearchParams } from "react-router-dom";
 
 const ComponentsInReact_04 = () => {
@@ -14,8 +16,14 @@ const ComponentsInReact_04 = () => {
           Explain the difference between a function and a functional component.
         </li>
       </ol>
+      <h1>Task 1</h1>
+      <Greeting />
+      <hr class="rounded"></hr>
       <h1>Task 2</h1>
-      <p>Hello, {name}! Welcome to React.</p>
+      <GreetingParameterized name="Tahseen" />
+      <p>
+        Hello, {name}! Welcome to React. (Here parameter receiviing from url){" "}
+      </p>
     </div>
   );
 };
