@@ -1,113 +1,32 @@
-import React, { useState } from "react";
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import WhatIsReact_01 from "./components/01_WhatIsReact/WhatIsReact_01";
+import SettingUpReact_02 from "./components/02_SettingUpReact/SettingUpReact_02";
 import "./App.css";
-import ChildComponent from "./ChildComponent";
 
 const App = () => {
-  const [counter, setCounter] = useState(5);
-  const [childMessage, setChildMessage] = useState("");
-  const [userData, setUserData] = useState({
-    name: "John Doe",
-    age: 30,
-    email: "john.doe@example.com",
-    isAdmin: true,
-    hobbies: ["Reading", "Hiking", "Coding"],
-  });
-  //let counter = 0;
-  console.log("render", counter);
-  const handleClick1 = () => {
-    setCounter(counter + 1);
-    //counter++;
-    console.log(counter);
-  };
-
-  const handleClick2 = () => {
-    setCounter(counter - 1);
-    //counter--;
-    console.log(counter);
-  };
-
-  //Callback function to receive data from child
-  const handleChildEvent = (message) => {
-    setChildMessage(message);
-    alert(`Parent Received: ${message}`);
-  };
-
-  //Callback to update user name
-  const updateUserName = (newName) => {
-    setUserData((prev) => ({
-      ...prev,
-      name: newName,
-    }));
-  };
-
   return (
-    <div>
-      {/* <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: "300%",
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          top: "-15%",
-        }}
-      >
-        Counter App
-        <div
-          style={{
-            fontSize: "120%",
-            position: "relative",
-            top: "10vh",
-          }}
-        >
-          {counter}
-        </div>
-        <div className="buttons">
-          <button
-            style={{
-              fontSize: "60%",
-              position: "relative",
-              top: "20vh",
-              marginRight: "5px",
-              backgroundColor: "green",
-              borderRadius: "8%",
-              color: "white",
-            }}
-            onClick={handleClick1}
-          >
-            Increment
-          </button>
-          <button
-            style={{
-              fontSize: "60%",
-              position: "relative",
-              top: "20vh",
-              marginLeft: "5px",
-              backgroundColor: "red",
-              borderRadius: "8%",
-              color: "white",
-            }}
-            onClick={handleClick2}
-          >
-            Decrement
-          </button>
-        </div>
-      </div> */}
-      <br></br>
-      <div>
-        <ChildComponent
-          user={userData}
-          greeting="Hello from parent!"
-          showDetails={true}
-          onSendMessage={handleChildEvent} // Passing callback as prop
-          onUpdateName={updateUserName} // Another callback example
-        />
+    <Router>
+      <div className="app-container">
+        <nav className="sidebar">
+          <ul className="nav-links">
+            <li>
+              <Link to="/">WhatIsReact</Link>
+            </li>
+            <li>
+              <Link to="/SettingUpReact">SettingUpReact</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<WhatIsReact_01 />} />
+            <Route path="/SettingUpReact" element={<SettingUpReact_02 />} />
+          </Routes>
+        </main>
       </div>
-    </div>
+    </Router>
   );
 };
 
