@@ -10,6 +10,7 @@ import Conditionals_07 from "./components/07_Conditionals/Conditionals_07";
 import FormsAndConditionals_08 from "./components/08_FormsAndConditionals/FormsAndConditionals_08";
 import Lists_09 from "./components/09_Lists/Lists_09";
 import IntroductionToReactHooks_10 from "./components/10_IntroductionToReactHooks/IntroductionToReactHooks_10";
+import UseStateInDepth_11 from "./components/11_useStateInDepth/UseStateInDepth_11";
 import "./App.css";
 
 const App = () => {
@@ -52,6 +53,9 @@ const App = () => {
                 IntroductionToReactHooks
               </Link>
             </li>
+            <li>
+              <Link to="/useStateInDepth">useStateInDepth</Link>
+            </li>
           </ul>
         </nav>
 
@@ -79,6 +83,7 @@ const App = () => {
               path="/IntroductionToReactHooks"
               element={<IntroductionToReactHooks_10 />}
             />
+            <Route path="/useStateInDepth" element={<UseStateInDepth_11 />} />
           </Routes>
         </main>
       </div>
