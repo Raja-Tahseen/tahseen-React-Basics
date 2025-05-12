@@ -19,7 +19,7 @@ const Lists_09 = () => {
         <hr class="rounded"></hr>
       </div>
       <div>
-        <h2>Task 2 - Implement a search feature that filters a list.</h2>
+        <h2>Task 3 - Implement a search feature that filters a list.</h2>
         <UserListWithSearch />
         <hr class="rounded"></hr>
       </div>

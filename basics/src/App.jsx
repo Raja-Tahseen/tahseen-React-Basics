@@ -9,6 +9,7 @@ import HandlingEvents_06 from "./components/06_HandlingEvents/HandlingEvents_06"
 import Conditionals_07 from "./components/07_Conditionals/Conditionals_07";
 import FormsAndConditionals_08 from "./components/08_FormsAndConditionals/FormsAndConditionals_08";
 import Lists_09 from "./components/09_Lists/Lists_09";
+import IntroductionToReactHooks_10 from "./components/10_IntroductionToReactHooks/IntroductionToReactHooks_10";
 import "./App.css";
 
 const App = () => {
@@ -46,6 +47,11 @@ const App = () => {
             <li>
               <Link to="/Lists">Lists</Link>
             </li>
+            <li>
+              <Link to="/IntroductionToReactHooks">
+                IntroductionToReactHooks
+              </Link>
+            </li>
           </ul>
         </nav>
 
@@ -69,6 +75,10 @@ const App = () => {
               element={<FormsAndConditionals_08 />}
             />
             <Route path="/Lists" element={<Lists_09 />} />
+            <Route
+              path="/IntroductionToReactHooks"
+              element={<IntroductionToReactHooks_10 />}
+            />
           </Routes>
         </main>
       </div>
