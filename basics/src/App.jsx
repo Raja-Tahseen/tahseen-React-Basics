@@ -2,6 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import WhatIsReact_01 from "./components/01_WhatIsReact/WhatIsReact_01";
 import SettingUpReact_02 from "./components/02_SettingUpReact/SettingUpReact_02";
+import IntroductionToJSK_03 from "./components/03_IntroductionToJSX/IntroductionToJSK_03";
+import ComponentsInReact_04 from "./components/04_ComponentsInReact/ComponentsInReact_04";
+import StateInReact_05 from "./components/05_StateInReact/StateInReact_05";
+import HandlingEvents_06 from "./components/06_HandlingEvents/HandlingEvents_06";
 import "./App.css";
 
 const App = () => {
@@ -16,6 +20,20 @@ const App = () => {
             <li>
               <Link to="/SettingUpReact">SettingUpReact</Link>
             </li>
+            <li>
+              <Link to="/IntroductionToJSK">IntroductionToJSK</Link>
+            </li>
+            <li>
+              <Link to="/ComponentsInReact?name=Tahseen">
+                ComponentsInReact
+              </Link>
+            </li>
+            <li>
+              <Link to="/StateInReact">StateInReact</Link>
+            </li>
+            <li>
+              <Link to="/HandlingEvents">HandlingEvents</Link>
+            </li>
           </ul>
         </nav>
 
@@ -23,6 +41,16 @@ const App = () => {
           <Routes>
             <Route path="/" element={<WhatIsReact_01 />} />
             <Route path="/SettingUpReact" element={<SettingUpReact_02 />} />
+            <Route
+              path="/IntroductionToJSK"
+              element={<IntroductionToJSK_03 />}
+            />
+            <Route
+              path="/ComponentsInReact"
+              element={<ComponentsInReact_04 />}
+            />
+            <Route path="/StateInReact" element={<StateInReact_05 />} />
+            <Route path="/HandlingEvents" element={<HandlingEvents_06 />} />
           </Routes>
         </main>
       </div>
