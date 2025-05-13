@@ -1,10 +1,23 @@
 function TodoList({ todos, toggleTodo, deleteTodo }) {
   return (
-    <ul>
+    <ul style={{ listStyle: "none", padding: 0 }}>
       {todos.map((todo) => (
-        <li key={todo.id}>
+        <li
+          key={todo.id}
+          style={{
+            margin: "8px 0",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <span
-            style={{ textDecoration: todo.completed ? "line-through" : "none" }}
+            style={{
+              textDecoration: todo.completed ? "line-through" : "none",
+              flexGrow: 1,
+              textAlign: "left",
+              marginRight: "10px",
+            }}
             onClick={() => toggleTodo(todo.id)}
           >
             {todo.text}

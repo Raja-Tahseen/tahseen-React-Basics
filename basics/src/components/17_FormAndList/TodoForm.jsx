@@ -17,8 +17,11 @@ function TodoForm({ addTodo }) {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="Add a new todo..."
+        style={{ padding: "8px", marginRight: "8px" }}
       />
-      <button type="submit">Add Todo</button>
+      <button type="submit" style={{ padding: "8px 12px", cursor: "pointer" }}>
+        Add Todo
+      </button>
     </form>
   );
 }
