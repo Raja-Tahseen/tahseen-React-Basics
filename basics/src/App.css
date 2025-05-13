@@ -58,3 +58,40 @@ html {
 h1 {
   color: #2c3e50;
 }
+
+.search-filter {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-filter input {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.filter-options {
+  display: flex;
+  gap: 5px;
+}
+
+.filter-options button {
+  flex: 1;
+  padding: 8px;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.filter-options button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+/* Make the edit input full width */
+li input[type="text"] {
+  flex-grow: 1;
+  padding: 5px;
+}
