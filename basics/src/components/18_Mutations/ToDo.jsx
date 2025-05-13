@@ -26,11 +26,22 @@ function ToDo() {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  const updateTodo = (id, newText) => {
+    setTodos(
+      todos.map((todo) => (todo.id === id ? { ...todo, text: newText } : todo))
+    );
+  };
+
   return (
     <div className="app">
       <h1>Todo List</h1>
       <TodoForm addTodo={addTodo} />
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      <TodoList
+        todos={todos}
+        toggleTodo={toggleTodo}
+        deleteTodo={deleteTodo}
+        updateTodo={updateTodo}
+      />
     </div>
   );
 }
