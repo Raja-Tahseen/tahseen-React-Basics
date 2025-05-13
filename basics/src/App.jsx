@@ -11,6 +11,7 @@ import FormsAndConditionals_08 from "./components/08_FormsAndConditionals/FormsA
 import Lists_09 from "./components/09_Lists/Lists_09";
 import IntroductionToReactHooks_10 from "./components/10_IntroductionToReactHooks/IntroductionToReactHooks_10";
 import UseStateInDepth_11 from "./components/11_useStateInDepth/UseStateInDepth_11";
+import UseEffectInDepth_12 from "./components/12_useEffectInDepth/UseEffectInDepth_12";
 import "./App.css";
 
 const App = () => {
@@ -56,6 +57,9 @@ const App = () => {
             <li>
               <Link to="/useStateInDepth">useStateInDepth</Link>
             </li>
+            <li>
+              <Link to="/UseEffectInDepth">UseEffectInDepth</Link>
+            </li>
           </ul>
         </nav>
 
@@ -84,6 +88,7 @@ const App = () => {
               element={<IntroductionToReactHooks_10 />}
             />
             <Route path="/useStateInDepth" element={<UseStateInDepth_11 />} />
+            <Route path="/UseEffectInDepth" element={<UseEffectInDepth_12 />} />
           </Routes>
         </main>
       </div>
