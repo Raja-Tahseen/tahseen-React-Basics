@@ -13,6 +13,8 @@ import IntroductionToReactHooks_10 from "./components/10_IntroductionToReactHook
 import UseStateInDepth_11 from "./components/11_useStateInDepth/UseStateInDepth_11";
 import UseEffectInDepth_12 from "./components/12_useEffectInDepth/UseEffectInDepth_12";
 import UseRefInDepth_13 from "./components/13_useRefInDepth/UseRefInDepth_13";
+import HandlingFormsInReact_14 from "./components/14_HandlingFormsInReact/HandlingFormsInReact_14";
+import FormAndList_17 from "./components/17_FormAndList/FormAndList_17";
 import "./App.css";
 
 const App = () => {
@@ -64,6 +66,12 @@ const App = () => {
             <li>
               <Link to="/UseRefInDepth">UseRefInDepth</Link>
             </li>
+            <li>
+              <Link to="/HandlingFormsInReact">HandlingFormsInReact</Link>
+            </li>
+            <li>
+              <Link to="/FormAndList">FormAndList</Link>
+            </li>
           </ul>
         </nav>
 
@@ -94,6 +102,11 @@ const App = () => {
             <Route path="/useStateInDepth" element={<UseStateInDepth_11 />} />
             <Route path="/UseEffectInDepth" element={<UseEffectInDepth_12 />} />
             <Route path="/UseRefInDepth" element={<UseRefInDepth_13 />} />
+            <Route
+              path="/HandlingFormsInReact"
+              element={<HandlingFormsInReact_14 />}
+            />
+            <Route path="/FormAndList" element={<FormAndList_17 />} />
           </Routes>
         </main>
       </div>
