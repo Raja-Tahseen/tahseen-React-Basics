@@ -12,6 +12,7 @@ import Lists_09 from "./components/09_Lists/Lists_09";
 import IntroductionToReactHooks_10 from "./components/10_IntroductionToReactHooks/IntroductionToReactHooks_10";
 import UseStateInDepth_11 from "./components/11_useStateInDepth/UseStateInDepth_11";
 import UseEffectInDepth_12 from "./components/12_useEffectInDepth/UseEffectInDepth_12";
+import UseRefInDepth_13 from "./components/13_useRefInDepth/UseRefInDepth_13";
 import "./App.css";
 
 const App = () => {
@@ -60,6 +61,9 @@ const App = () => {
             <li>
               <Link to="/UseEffectInDepth">UseEffectInDepth</Link>
             </li>
+            <li>
+              <Link to="/UseRefInDepth">UseRefInDepth</Link>
+            </li>
           </ul>
         </nav>
 
@@ -89,6 +93,7 @@ const App = () => {
             />
             <Route path="/useStateInDepth" element={<UseStateInDepth_11 />} />
             <Route path="/UseEffectInDepth" element={<UseEffectInDepth_12 />} />
+            <Route path="/UseRefInDepth" element={<UseRefInDepth_13 />} />
           </Routes>
         </main>
       </div>
