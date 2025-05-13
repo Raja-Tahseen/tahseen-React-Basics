@@ -15,6 +15,7 @@ import UseEffectInDepth_12 from "./components/12_useEffectInDepth/UseEffectInDep
 import UseRefInDepth_13 from "./components/13_useRefInDepth/UseRefInDepth_13";
 import HandlingFormsInReact_14 from "./components/14_HandlingFormsInReact/HandlingFormsInReact_14";
 import FormAndList_17 from "./components/17_FormAndList/FormAndList_17";
+import Mutations_18 from "./components/18_Mutations/Mutations_18";
 import "./App.css";
 
 const App = () => {
@@ -72,6 +73,9 @@ const App = () => {
             <li>
               <Link to="/FormAndList">FormAndList</Link>
             </li>
+            <li>
+              <Link to="/Mutations">Mutations</Link>
+            </li>
           </ul>
         </nav>
 
@@ -107,6 +111,7 @@ const App = () => {
               element={<HandlingFormsInReact_14 />}
             />
             <Route path="/FormAndList" element={<FormAndList_17 />} />
+            <Route path="/Mutations" element={<Mutations_18 />} />
           </Routes>
         </main>
       </div>
