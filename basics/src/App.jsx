@@ -14,6 +14,7 @@ import UseStateInDepth_11 from "./components/11_useStateInDepth/UseStateInDepth_
 import UseEffectInDepth_12 from "./components/12_useEffectInDepth/UseEffectInDepth_12";
 import UseRefInDepth_13 from "./components/13_useRefInDepth/UseRefInDepth_13";
 import HandlingFormsInReact_14 from "./components/14_HandlingFormsInReact/HandlingFormsInReact_14";
+import FormControls_16 from "./components/16_FormControls/FormControls_16";
 import FormAndList_17 from "./components/17_FormAndList/FormAndList_17";
 import Mutations_18 from "./components/18_Mutations/Mutations_18";
 import Filters_19 from "./components/19_Filters/Filters_19";
@@ -73,6 +74,9 @@ const App = () => {
               <Link to="/HandlingFormsInReact">HandlingFormsInReact</Link>
             </li>
             <li>
+              <Link to="/FormControls">FormControls</Link>
+            </li>
+            <li>
               <Link to="/FormAndList">FormAndList</Link>
             </li>
             <li>
@@ -118,6 +122,7 @@ const App = () => {
               path="/HandlingFormsInReact"
               element={<HandlingFormsInReact_14 />}
             />
+            <Route path="/FormControls" element={<FormControls_16 />} />
             <Route path="/FormAndList" element={<FormAndList_17 />} />
             <Route path="/Mutations" element={<Mutations_18 />} />
             <Route path="/Filters" element={<Filters_19 />} />
