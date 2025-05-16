@@ -19,6 +19,12 @@ import FormAndList_17 from "./components/17_FormAndList/FormAndList_17";
 import Mutations_18 from "./components/18_Mutations/Mutations_18";
 import Filters_19 from "./components/19_Filters/Filters_19";
 import Persistance_20 from "./components/20_Persistance/Persistance_20";
+import Home from "./pages/Home";
+import User from "./pages/User";
+import Login from "./pages/Login";
+import Product from "./pages/Product";
+import Dashboard from "./pages/Dashboard";
+import NotFound from "./pages/NotFound";
 import "./App.css";
 
 const App = () => {
@@ -88,6 +94,22 @@ const App = () => {
             <li>
               <Link to="/Persistance">Persistance</Link>
             </li>
+
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/user/123">User 123</Link>
+            </li>
+            <li>
+              <Link to="/product/456">Product 456</Link>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
           </ul>
         </nav>
 
@@ -127,6 +149,17 @@ const App = () => {
             <Route path="/Mutations" element={<Mutations_18 />} />
             <Route path="/Filters" element={<Filters_19 />} />
             <Route path="/Persistance" element={<Persistance_20 />} />
+
+            <Route index element={<Home />} />
+            <Route path="user/:userId" element={<User />} />
+            <Route path="product/:id" element={<Product />} />
+            <Route path="dashboard" element={<Dashboard />}>
+              <Route index element={<Dashboard.Profile />} />
+              <Route path="profile" element={<Dashboard.Profile />} />
+              <Route path="settings" element={<Dashboard.Settings />} />
+            </Route>
+            <Route path="login" element={<Login />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </div>
