@@ -52,17 +52,17 @@ function ToDo() {
     <div className="app">
       <h1>Todo List</h1>
       <SearchAndFilter
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        filter={filter}
-        setFilter={setFilter}
+        onSearchTerm={searchTerm}
+        onSetSearchTerm={setSearchTerm}
+        onFilter={filter}
+        onSetFilter={setFilter}
       />
-      <TodoForm addTodo={addTodo} />
+      <TodoForm onAddTodo={addTodo} />
       <TodoList
         todos={filteredTodos}
-        toggleTodo={toggleTodo}
-        deleteTodo={deleteTodo}
-        updateTodo={updateTodo}
+        onToggleTodo={toggleTodo}
+        onDeleteTodo={deleteTodo}
+        onUpdateTodo={updateTodo}
       />
     </div>
   );

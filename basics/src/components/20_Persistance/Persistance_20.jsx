@@ -13,7 +13,7 @@ const Persistance_20 = () => {
       <div>
         <h2>Task 1 - Persist todos on page refresh using localstorage.</h2>
         <ToDo />
-        <hr class="rounded"></hr>
+        <hr className="rounded"></hr>
       </div>
     </div>
   );
