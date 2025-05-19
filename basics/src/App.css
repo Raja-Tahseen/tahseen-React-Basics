@@ -95,3 +95,19 @@ li input[type="text"] {
   flex-grow: 1;
   padding: 5px;
 }
+
+.input-style-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-style {
+  padding: 8px;
+  margin-right: 8px;
+}
+
+.input-btn {
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+}
