@@ -13,7 +13,7 @@ const Filters_19 = () => {
       <div>
         <h2>Task 1 - Add support for searching and filtration.</h2>
         <ToDo />
-        <hr class="rounded"></hr>
+        <hr className="rounded"></hr>
       </div>
     </div>
   );
