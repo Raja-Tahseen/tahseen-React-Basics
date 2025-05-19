@@ -1,29 +1,34 @@
-function SearchAndFilter({ searchTerm, setSearchTerm, filter, setFilter }) {
+function SearchAndFilter({
+  onSearchTerm,
+  onSetSearchTerm,
+  onFilter,
+  onSetFilter,
+}) {
   return (
     <div className="search-filter">
       <input
         type="text"
         placeholder="Search todos..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
+        value={onSearchTerm}
+        onChange={(e) => onSetSearchTerm(e.target.value)}
       />
 
       <div className="filter-options">
         <button
-          className={filter === "all" ? "active" : ""}
-          onClick={() => setFilter("all")}
+          className={onFilter === "all" ? "active" : ""}
+          onClick={() => onSetFilter("all")}
         >
           All
         </button>
         <button
-          className={filter === "active" ? "active" : ""}
-          onClick={() => setFilter("active")}
+          className={onFilter === "active" ? "active" : ""}
+          onClick={() => onSetFilter("active")}
         >
           Active
         </button>
         <button
-          className={filter === "completed" ? "active" : ""}
-          onClick={() => setFilter("completed")}
+          className={onFilter === "completed" ? "active" : ""}
+          onClick={() => onSetFilter("completed")}
         >
           Completed
         </button>

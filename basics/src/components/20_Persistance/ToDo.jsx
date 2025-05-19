@@ -85,17 +85,17 @@ function ToDo() {
     <div className="app">
       <h1>Todo List</h1>
       <SearchAndFilter
-        searchTerm={searchTerm}
-        setSearchTerm={(value) => updateState({ searchTerm: value })}
-        filter={filter}
-        setFilter={(value) => updateState({ filter: value })}
+        onSearchTerm={searchTerm}
+        onSetSearchTerm={(value) => updateState({ searchTerm: value })}
+        onFilter={filter}
+        onSetFilter={(value) => updateState({ filter: value })}
       />
-      <TodoForm addTodo={addTodo} />
+      <TodoForm onAddTodo={addTodo} />
       <TodoList
         todos={filteredTodos}
-        toggleTodo={toggleTodo}
-        deleteTodo={deleteTodo}
-        updateTodo={updateTodo}
+        onToggleTodo={toggleTodo}
+        onDeleteTodo={deleteTodo}
+        onUpdateTodo={updateTodo}
       />
     </div>
   );

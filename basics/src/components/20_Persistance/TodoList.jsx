@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function TodoList({ todos, toggleTodo, deleteTodo, updateTodo }) {
+function TodoList({ todos, onToggleTodo, onDeleteTodo, onUpdateTodo }) {
   const [editingId, setEditingId] = useState(null);
   const [editText, setEditText] = useState("");
 
@@ -11,7 +11,7 @@ function TodoList({ todos, toggleTodo, deleteTodo, updateTodo }) {
 
   const saveEdit = (id) => {
     if (editText.trim()) {
-      updateTodo(id, editText);
+      onUpdateTodo(id, editText);
     }
     setEditingId(null);
   };
@@ -50,13 +50,13 @@ function TodoList({ todos, toggleTodo, deleteTodo, updateTodo }) {
                 textAlign: "left",
                 marginRight: "10px",
               }}
-              onClick={() => toggleTodo(todo.id)}
+              onClick={() => onToggleTodo(todo.id)}
             >
               {todo.text}
             </span>
           )}
           <button onClick={() => startEditing(todo)}>Edit</button>
-          <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+          <button onClick={() => onDeleteTodo(todo.id)}>Delete</button>
         </li>
       ))}
     </ul>
