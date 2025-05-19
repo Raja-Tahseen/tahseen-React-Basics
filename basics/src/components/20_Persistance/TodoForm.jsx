@@ -5,7 +5,10 @@ function TodoForm({ onAddTodo }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!value.trim()) return;
+    if (!value.trim()) {
+      alert("ToDo input field is empty. Please enter a task.");
+      return;
+    }
     onAddTodo(value);
     setValue("");
   };
