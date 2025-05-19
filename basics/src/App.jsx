@@ -25,6 +25,7 @@ import Login from "./pages/Login";
 import Product from "./pages/Product";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
+import UseContext_25_26_27 from "./components/25_26_27_UseContext/UseContext_25_26_27";
 import "./App.css";
 import { useAuth } from "./components/AuthWrapper";
 
@@ -109,10 +110,13 @@ const App = () => {
               <li>
                 <Link to="/dashboard">Dashboard</Link>
               </li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
             </>
           )}
           <li>
-            <Link to="/login">Login</Link>
+            <Link to="/UseContext">UseContext</Link>
           </li>
         </ul>
       </nav>
@@ -158,6 +162,7 @@ const App = () => {
           </Route>
           <Route path="login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/UseContext" element={<UseContext_25_26_27 />} />
         </Routes>
       </main>
     </div>
