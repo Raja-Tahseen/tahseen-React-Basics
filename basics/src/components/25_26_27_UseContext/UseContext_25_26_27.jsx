@@ -1,5 +1,7 @@
 import React from "react";
-// import ToDo from "./ToDo";
+import { CounterProvider } from "./CounterContext";
+import CounterDisplay from "./CounterDisplay";
+import CounterButtons from "./CounterButtons";
 
 const UseContext_25_26_27 = () => {
   return (
@@ -16,8 +18,15 @@ const UseContext_25_26_27 = () => {
         </ol>
       </div>
       <div>
-        {/* <h2>Task 1 - Persist todos on page refresh using localstorage.</h2>
-        <ToDo /> */}
+        <h2>
+          Task 1 - Create and consume context provider and consumer with counter
+          as an example.
+        </h2>
+        <CounterProvider>
+          <h1>Counter App with Context</h1>
+          <CounterDisplay />
+          <CounterButtons />
+        </CounterProvider>
         <hr className="rounded"></hr>
       </div>
     </div>
