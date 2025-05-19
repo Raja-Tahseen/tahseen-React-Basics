@@ -111,3 +111,37 @@ li input[type="text"] {
   cursor: pointer;
   margin-top: 10px;
 }
+
+/* styles.css */
+.app {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.app.light {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.app.dark {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.theme-toggle {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  margin: 10px;
+}
+
+.light .theme-toggle {
+  background-color: #333;
+  color: white;
+}
+
+.dark .theme-toggle {
+  background-color: #f0f0f0;
+  color: #333;
+}

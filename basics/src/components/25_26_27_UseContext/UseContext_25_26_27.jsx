@@ -1,7 +1,9 @@
 import React from "react";
 import { CounterProvider } from "./CounterContext";
+import { ThemeProvider } from "./ThemeContext";
 import CounterDisplay from "./CounterDisplay";
 import CounterButtons from "./CounterButtons";
+import ThemeToggle from "./ThemeToggle";
 
 const UseContext_25_26_27 = () => {
   return (
@@ -22,11 +24,14 @@ const UseContext_25_26_27 = () => {
           Task 1 - Create and consume context provider and consumer with counter
           as an example.
         </h2>
-        <CounterProvider>
-          <h1>Counter App with Context</h1>
-          <CounterDisplay />
-          <CounterButtons />
-        </CounterProvider>
+        <ThemeProvider>
+          <CounterProvider>
+            <h1>Counter App with Context</h1>
+            <ThemeToggle />
+            <CounterDisplay />
+            <CounterButtons />
+          </CounterProvider>
+        </ThemeProvider>
         <hr className="rounded"></hr>
       </div>
     </div>
