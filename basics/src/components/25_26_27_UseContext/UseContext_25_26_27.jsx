@@ -20,14 +20,15 @@ const UseContext_25_26_27 = () => {
         </ol>
       </div>
       <div>
-        <h2>
-          Task 1 - Create and consume context provider and consumer with counter
-          as an example.
-        </h2>
         <ThemeProvider>
           <CounterProvider>
-            <h1>Counter App with Context</h1>
+            <h2>Task 2 - Implement a theme toggle using global context.</h2>
             <ThemeToggle />
+            <h2>
+              Task 1 - Create and consume context provider and consumer with
+              counter as an example.
+            </h2>
+            <h2>Counter App with Context</h2>
             <CounterDisplay />
             <CounterButtons />
           </CounterProvider>
