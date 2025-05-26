@@ -19,24 +19,29 @@ import FormAndList_17 from "./components/17_FormAndList/FormAndList_17";
 import Mutations_18 from "./components/18_Mutations/Mutations_18";
 import Filters_19 from "./components/19_Filters/Filters_19";
 import Persistance_20 from "./components/20_Persistance/Persistance_20";
-import Home from "./pages/Home";
-import User from "./pages/User";
-import Login from "./pages/Login";
-import Product from "./pages/Product";
-import Dashboard from "./pages/Dashboard";
-import NotFound from "./pages/NotFound";
+// import Home from "./pages/Home";
+// import User from "./pages/User";
+// import Login from "./pages/Login";
+// import Product from "./pages/Product";
+// import Dashboard from "./pages/Dashboard";
+// import NotFound from "./pages/NotFound";
+import UseContext_25_26_27 from "./components/25_26_27_UseContext/UseContext_25_26_27";
+import ProtectedRoute from "./components/25_26_27_UseContext/ProtectedRoute";
+import LoginPage from "./components/25_26_27_UseContext/LoginPage";
+import DashboardPage from "./components/25_26_27_UseContext/DashboardPage";
+import HomePage from "./components/25_26_27_UseContext/HomePage";
 import "./App.css";
-import { useAuth } from "./components/AuthWrapper";
+// import { useAuth } from "./components/AuthWrapper";
 
 const App = () => {
-  const { isAuthenticated, toggleAuth } = useAuth();
+  // const { isAuthenticated, toggleAuth } = useAuth();
   return (
     <div className="app-container">
       <nav className="sidebar">
         <ul className="nav-links">
-          <button onClick={toggleAuth}>
+          {/* <button onClick={toggleAuth}>
             {isAuthenticated ? "Logout" : "Login"}
-          </button>
+          </button> */}
           <li>
             <Link to="/">WhatIsReact</Link>
           </li>
@@ -95,7 +100,7 @@ const App = () => {
             <Link to="/Persistance">Persistance</Link>
           </li>
 
-          {isAuthenticated && (
+          {/* {isAuthenticated && (
             <>
               <li>
                 <Link to="/">Home</Link>
@@ -109,17 +114,23 @@ const App = () => {
               <li>
                 <Link to="/dashboard">Dashboard</Link>
               </li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
             </>
-          )}
+          )} */}
           <li>
-            <Link to="/login">Login</Link>
+            <Link to="/UseContext">UseContext</Link>
+          </li>
+          <li>
+            <Link to="/Login">LoginPage</Link>
           </li>
         </ul>
       </nav>
 
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<WhatIsReact_01 />} />
+          {/* <Route path="/" element={<WhatIsReact_01 />} /> */}
           <Route path="/SettingUpReact" element={<SettingUpReact_02 />} />
           <Route path="/IntroductionToJSK" element={<IntroductionToJSK_03 />} />
           <Route path="/ComponentsInReact" element={<ComponentsInReact_04 />} />
@@ -148,7 +159,7 @@ const App = () => {
           <Route path="/Filters" element={<Filters_19 />} />
           <Route path="/Persistance" element={<Persistance_20 />} />
 
-          <Route index element={<Home />} />
+          {/* <Route index element={<Home />} />
           <Route path="user/:userId" element={<User />} />
           <Route path="product/:id" element={<Product />} />
           <Route path="dashboard" element={<Dashboard />}>
@@ -156,8 +167,20 @@ const App = () => {
             <Route path="profile" element={<Dashboard.Profile />} />
             <Route path="settings" element={<Dashboard.Settings />} />
           </Route>
-          <Route path="login" element={<Login />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="login" element={<Login />} /> 
+          <Route path="*" element={<NotFound />} />*/}
+
+          <Route path="/UseContext" element={<UseContext_25_26_27 />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <DashboardPage />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </main>
     </div>
