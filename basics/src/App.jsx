@@ -25,13 +25,14 @@ import Persistance_20 from "./components/20_Persistance/Persistance_20";
 // import Product from "./pages/Product";
 // import Dashboard from "./pages/Dashboard";
 // import NotFound from "./pages/NotFound";
-import UseContext_25_26_27 from "./components/25_26_27_UseContext/UseContext_25_26_27";
-import ProtectedRoute from "./components/25_26_27_UseContext/ProtectedRoute";
-import LoginPage from "./components/25_26_27_UseContext/LoginPage";
-import DashboardPage from "./components/25_26_27_UseContext/DashboardPage";
-import HomePage from "./components/25_26_27_UseContext/HomePage";
+// import UseContext_25_26_27 from "./components/25_26_27_UseContext/UseContext_25_26_27";
+// import ProtectedRoute from "./components/25_26_27_UseContext/ProtectedRoute";
+// import LoginPage from "./components/25_26_27_UseContext/LoginPage";
+// import DashboardPage from "./components/25_26_27_UseContext/DashboardPage";
+// import HomePage from "./components/25_26_27_UseContext/HomePage";
 import "./App.css";
 // import { useAuth } from "./components/AuthWrapper";
+import Redux_28_29_30_31 from "./components/28_29_30_31_Redux/Redux_28_29_30_31";
 
 const App = () => {
   // const { isAuthenticated, toggleAuth } = useAuth();
@@ -125,12 +126,15 @@ const App = () => {
           <li>
             <Link to="/Login">LoginPage</Link>
           </li>
+          <li>
+            <Link to="/Redux">Redux</Link>
+          </li>
         </ul>
       </nav>
 
       <main className="main-content">
         <Routes>
-          {/* <Route path="/" element={<WhatIsReact_01 />} /> */}
+          <Route path="/" element={<WhatIsReact_01 />} />
           <Route path="/SettingUpReact" element={<SettingUpReact_02 />} />
           <Route path="/IntroductionToJSK" element={<IntroductionToJSK_03 />} />
           <Route path="/ComponentsInReact" element={<ComponentsInReact_04 />} />
@@ -170,17 +174,18 @@ const App = () => {
           <Route path="login" element={<Login />} /> 
           <Route path="*" element={<NotFound />} />*/}
 
-          <Route path="/UseContext" element={<UseContext_25_26_27 />} />
+          {/* <Route path="/UseContext" element={<UseContext_25_26_27 />} />
           <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route
+          <Route path="/login" element={<LoginPage />} /> */}
+          <Route path="/Redux" element={<Redux_28_29_30_31 />} />
+          {/* <Route
             path="/dashboard"
             element={
               <ProtectedRoute>
                 <DashboardPage />
               </ProtectedRoute>
             }
-          />
+          /> */}
         </Routes>
       </main>
     </div>
