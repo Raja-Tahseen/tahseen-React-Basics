@@ -8,6 +8,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { store } from "./redux/store";
 import { Provider } from "react-redux";
 import Counter from "./components/28_29_30_31_Redux/Counter";
+import UsersList from "./components/28_29_30_31_Redux/UsersList";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")).render(
       <Provider store={store}>
         <App />
         <Counter />
+        <UsersList />
       </Provider>
       {/* </AuthProvider> */}
     </Router>
